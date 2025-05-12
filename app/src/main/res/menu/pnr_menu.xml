@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/language_pnr"
+        android:title="Language"
+    />
+
+    <item
+        android:id="@+id/ClearPnr"
+        android:title="Clear PNR History"
+       />
+
+    <item
+        android:id="@+id/report_issue"
+        android:title="Repost Issue"
+       />
+
+
+    <item
+        android:id="@+id/setting"
+        android:title="Setting"
+        />
+
+</menu>

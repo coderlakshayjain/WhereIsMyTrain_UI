@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <item android:id="@+id/updateTimetable"
+        android:title="Update Timetable"
+        android:icon="@drawable/ic_update"
+        />
+
+
+    <item android:id="@+id/Language"
+        android:title="Language"
+        android:icon="@drawable/ic_lang"
+        />
+
+
+    <item
+        android:id="@+id/menu_change_city"
+        android:icon="@drawable/ic_city"
+        android:title="Change city" />
+    <item
+        android:id="@+id/menu_clear_recent_searches"
+        android:icon="@drawable/ic_cancel"
+        android:title="Clear Recent Searches" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/menu_share_app"
+        android:icon="@drawable/ic_share"
+        android:title="Share App" />
+    <item
+        android:id="@+id/menu_rate_us"
+        android:icon="@drawable/ic_rateus"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/menu_report_issue"
+        android:icon="@drawable/ic_debug"
+        android:title="Report Issue" />
+    <item
+        android:id="@+id/menu_suggest_feature"
+        android:icon="@drawable/ic_suggest"
+        android:title="Suggest a feature" />
+    <item
+        android:id="@+id/menu_view_all_alerts"
+        android:icon="@drawable/ic_alert"
+        android:title="View all Alerts" />
+
+
+</menu>

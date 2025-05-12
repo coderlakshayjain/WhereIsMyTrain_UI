@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tickets_Activity"
+    android:backgroundTint="@color/input_background"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        android:background="?android:attr/colorPrimary"
+        android:elevation="4dp"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardvTickets"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarTickets"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstConstraint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/pt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="22dp"
+                    android:src="@drawable/ic_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="42dp"
+                    android:src="@drawable/ic_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pt1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/secondconstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/firstConstraint"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <EditText
+                    android:id="@+id/FromStation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/backgroundinput"
+                    android:hint="From Station"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    app:layout_constraintBottom_toTopOf="@id/ToStation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="2dp"
+                    android:src="@drawable/close"
+                    app:layout_constraintBottom_toBottomOf="@id/FromStation"
+                    app:layout_constraintRight_toRightOf="@id/FromStation"
+                    app:layout_constraintTop_toTopOf="@id/FromStation" />
+
+                <View
+                    android:id="@+id/seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="#989797"
+                    app:layout_constraintTop_toBottomOf="@id/FromStation" />
+
+                <EditText
+                    android:id="@+id/ToStation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/backgroundinput"
+                    android:hint="To Station"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="2dp"
+                    android:src="@drawable/close"
+                    app:layout_constraintBottom_toBottomOf="@id/ToStation"
+                    app:layout_constraintRight_toRightOf="@id/ToStation"
+                    app:layout_constraintTop_toTopOf="@id/ToStation" />
+
+
+                <ImageView
+                    android:id="@+id/updown"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="35dp"
+                    android:src="@drawable/updown"
+                    app:layout_constraintBottom_toBottomOf="@+id/ToStation"
+                    app:layout_constraintEnd_toEndOf="@+id/seperator"
+                    app:layout_constraintTop_toTopOf="@id/FromStation" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/seperatorSec"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="6dp"
+                android:background="#989797"
+                app:layout_constraintTop_toBottomOf="@id/secondconstraint" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seperatorSec">
+
+                <LinearLayout
+                    android:id="@+id/jd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/calenderIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="6dp"
+                        android:src="@drawable/calender"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="4dp"
+                        android:text="Journey Date"
+                        android:textSize="10sp"
+                        app:layout_constraintLeft_toRightOf="@id/calenderIcon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/selectedJD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:hint="27 January,Monday"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/jd" />
+
+                <View
+                    android:id="@+id/seperatorThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="#989797"
+                    app:layout_constraintTop_toBottomOf="@id/selectedJD" />
+
+                <LinearLayout
+                    android:id="@+id/quota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seperatorThird">
+
+                    <ImageView
+                        android:id="@+id/quotaIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="6dp"
+                        android:src="@drawable/pie"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="4dp"
+                        android:text="Quota"
+                        android:textSize="10sp"
+                        app:layout_constraintLeft_toRightOf="@id/calenderIcon" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/quotall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/quota">
+
+                    <TextView
+                        android:id="@+id/intitals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:background="@color/primary"
+                        android:padding="6dp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/selectedQuota"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/selectedQuota"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="3"
+                        android:hint="select quota"
+                        android:padding="8dp"
+                        android:textSize="18sp"
+                        app:layout_constraintRight_toLeftOf="@id/downList"
+                        app:layout_constraintLeft_toRightOf="@id/intitals"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/downList"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:src="@drawable/down"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="#43A047"
+                    android:text="Book tickets on ConfirmTkt"
+                    android:textSize="18sp"
+                    app:cornerRadius="8dp"
+                    android:drawableRight="@drawable/ic_go"
+                    android:drawableTint="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/quotall"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardvTickets"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:elevation="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgTickets"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_tickets"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Tickets on Confirmtkt"
+            android:textSize="17sp"
+            android:textColor="@color/primary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="2dp"
+            app:layout_constraintLeft_toRightOf="@id/imgTickets"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="2dp"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_go"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
